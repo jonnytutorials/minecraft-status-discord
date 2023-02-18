@@ -1,0 +1,9 @@
+{
+  "status_channel": 0,
+  "token": "",
+  "address": "",
+  "maintenance_keyword": "",
+  "api": {
+    "java": "https://api.mcsrvstat.us/2/"
+  }
+}
