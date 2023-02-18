@@ -1,6 +1,6 @@
 # Minecraft Status Bot
 Der Minecraft Status Bot ist ein Discord Bot, der den Status des Minecraft Server über ein Online API abfragt und in einem Discord Kanal als Nachricht anzeigt.
-**Aktuell ist der Bot nur für Minecraft-Java Server auf port 25565 kompatibel!**
+**Aktuell ist der Bot nur für Minecraft-Java Server unter port 25565 kompatibel!**
 
 ## Einrichtung
 Benötigte Software:
@@ -25,7 +25,7 @@ pip install nextcord==2.1.0 aiohttp==3.8.1
 `status_channel` - ID des Text-Kanals in dem der Status angezeigt werden soll [Anleitung: Kanal-ID kopieren](https://youtu.be/C3XSildxVi0)<br>
 `token` - der Token deines Discord Bots<br>
 `address` - die Adresse deines Minecraft Servers<br>
-`maintenance_keyword` - Ein Wort, das in der Motd des Servers enthalten ist, wenn der Wartungsmodus aktiviert ist<br>
+`maintenance_keyword` - ein Wort, das in der Motd des Servers enthalten ist, wenn der Wartungsmodus aktiviert ist<br>
 
 4. Starte den Bot:<br>
 Beim ersten Start des Bots treten Fehler auf!
@@ -35,7 +35,7 @@ Beim ersten Start des Bots treten Fehler auf!
 | --- | --- |
 | /reload_config | läd die `config.json` neu und aktualisiert die Status-Nachricht |
 
-# Bilder
+## Bilder
 <p align="center">
 <img src="https://github.com/jonnytutorials/minecraft-status-discord/blob/main/images/online.png" alt="status-online">
 <img src="https://github.com/jonnytutorials/minecraft-status-discord/blob/main/images/maintenance.png" alt="status-maintenance">
