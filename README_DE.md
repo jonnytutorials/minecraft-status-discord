@@ -42,4 +42,7 @@ Beim ersten Start des Bots treten Fehler auf!
 <img src="https://github.com/jonnytutorials/minecraft-status-discord/blob/main/images/offline.png" alt="status-offline">
 </p>
 
+Hinweis:
+**Ich übernehme keine Haftung! Benutzung auf eigene Gefahr!**
+
 ### Fehler kannst du [hier](https://github.com/jonnytutorials/minecraft-status-discord/issues/new) melden. Für Verbesserungsvorschläge steht mein [Discord Server](https://discord.gg/s9tD46Fwh8) zur Verfügung.
