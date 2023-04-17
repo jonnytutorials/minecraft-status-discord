@@ -13,14 +13,14 @@ from nextcord.ext import commands, tasks
 
 def config_loader():
     global settings, old_message
-    if os.path.exists("config.json"):
+    if os.path.exists("config.json") and os.path.exists("old_message"):
         try:
             old_message = int(open(file="old_msg", mode="r").read())
             settings = json.loads(open(file="config.json", mode="rb").read())
             print("[✔] Einstellungen (neu) geladen")
-        except:
-            print("[x] Die Konfiguration konnte nicht geladen werden!")
-            raise "cfg_err"
+        except Exception as e:
+            print(f"{e}\n[x] Konfiguration fehlerhaft -- STOPPE --")
+            exit("cfg_err")
     else:
         print("[x] Keine Konfigurationsdatei gefunden -- STOPPE --")
         exit("no_cfg")
@@ -91,15 +91,15 @@ async def refresh_status():
         print("[i] Die Nachricht wird neu erstellt!")
         try:
             await client.http.delete_message(message_id=old_message, channel_id=settings["status_channel"])
-        except:
-            print("[x] Die alte Nachricht konnte nicht gelöscht werden!")
+        except Exception as e:
+            print(f"{e}\n[x] Die alte Nachricht konnte nicht gelöscht werden!")
         try:
             new_message = await client.get_channel(settings["status_channel"]).send(embed=embed)
 
             open(file="old_msg", mode="w").write(str(new_message.id))
             config_loader()
-        except:
-            print(f"[x] Die Nachricht konnte nicht aktualisiert werden!")
+        except Exception as e:
+            print(f"{e}\n[x] Die Nachricht konnte nicht aktualisiert werden!")
 
 
 @client.slash_command(name="reload_config", default_member_permissions=nextcord.Permissions(administrator=True))
