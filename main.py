@@ -13,7 +13,7 @@ from nextcord.ext import commands, tasks
 
 def config_loader():
     global settings, old_message
-    if os.path.exists("config.json") and os.path.exists("old_message"):
+    if os.path.exists("config.json") and os.path.exists("old_msg"):
         try:
             old_message = int(open(file="old_msg", mode="r").read())
             settings = json.loads(open(file="config.json", mode="rb").read())
