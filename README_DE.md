@@ -33,7 +33,7 @@ Beim ersten Start des Bots treten Fehler auf!
 ## Befehle
 | Befehl  | Beschreibung |
 | --- | --- |
-| /reload_config | läd die `config.json` neu und aktualisiert die Status-Nachricht |
+| /reload_config | lädt die `config.json` neu und aktualisiert die Status-Nachricht |
 
 ## Bilder
 <p align="center">
